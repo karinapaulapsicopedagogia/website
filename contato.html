@@ -614,28 +614,54 @@
                         <h3>Envie uma mensagem</h3>
                         <p class="form-subtitle">Preencha o formulário abaixo e entrarei em contato em breve.</p>
                         
-                        <form id="contactForm" action="obrigado.html" method="GET" novalidate>
-                            <div class="form-group">
-                                <label for="nome">Nome completo</label>
-                                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="telefone">Telefone</label>
-                                <input type="tel" id="telefone" name="telefone" required placeholder="(11) 96131-6640">
-                            </div>
-                            <div class="form-group">
-                                <label for="mensagem">Mensagem</label>
-                                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva como posso ajudar você ou sua família..."></textarea>
-                            </div>
-                            <button type="submit" class="btn-submit">
-                                Enviar mensagem
-                                <span class="arrow">→</span>
-                            </button>
-                        </form>
+                        <form id="contactForm">
+
+    <div class="form-group">
+        <label for="nome">Nome completo</label>
+        <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Seu nome completo">
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="seu@email.com">
+    </div>
+
+    <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            required
+            placeholder="(11) 96131-6640">
+    </div>
+
+    <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            required
+            placeholder="Descreva como posso ajudar você ou sua família..."></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit" id="btnSubmit">
+        Enviar mensagem
+        <span class="arrow">→</span>
+    </button>
+
+</form>
                     </div>
                 </div>
             </div>
@@ -812,6 +838,74 @@
         }
     </script>
     
+    <!-- ============================================================
+         ENVIO DO FORMULÁRIO PARA O GOOGLE FORMS
+         ============================================================ -->
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const btnSubmit = document.getElementById('btnSubmit');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                if (!contactForm.checkValidity()) {
+                    contactForm.reportValidity();
+                    return;
+                }
+
+                btnSubmit.disabled = true;
+                btnSubmit.innerHTML = 'Enviando...';
+
+                const formData = new FormData();
+
+                formData.append(
+                    'entry.641698915',
+                    document.getElementById('nome').value.trim()
+                );
+
+                formData.append(
+                    'entry.2118881565',
+                    document.getElementById('email').value.trim()
+                );
+
+                formData.append(
+                    'entry.1999240705',
+                    document.getElementById('telefone').value.trim()
+                );
+
+                formData.append(
+                    'entry.598575680',
+                    document.getElementById('mensagem').value.trim()
+                );
+
+                fetch(
+                    'https://docs.google.com/forms/d/e/1FAIpQLSdC8-pkpXEp8JZR-Re4dpj7vg8KQa7BoRnl38V04ztJozZL8g/formResponse',
+                    {
+                        method: 'POST',
+                        body: formData,
+                        mode: 'no-cors'
+                    }
+                )
+                .then(function() {
+                    window.location.href = 'obrigado.html';
+                })
+                .catch(function(error) {
+                    console.error('Erro ao enviar formulário:', error);
+
+                    btnSubmit.disabled = false;
+                    btnSubmit.innerHTML =
+                        'Enviar mensagem <span class="arrow">→</span>';
+
+                    alert(
+                        'Não foi possível enviar sua mensagem. ' +
+                        'Por favor, tente novamente ou entre em contato pelo WhatsApp.'
+                    );
+                });
+            });
+        }
+    </script>
+
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/menu.js" defer></script>
     <script src="assets/js/scroll.js" defer></script>

@@ -1,1 +1,101 @@
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
 
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+/* ===== HOVER ANIMATIONS ===== */
+.diferencial-card,
+.servico-card,
+.depoimento-card,
+.servico-card-destaque,
+.depoimento-card-destaque,
+.abordagem-card,
+.publico-item,
+.resultado-item,
+.localizacao-item,
+.passo-card {
+    transition: all 0.3s ease;
+}
+
+.diferencial-card:hover,
+.servico-card:hover,
+.depoimento-card:hover,
+.servico-card-destaque:hover,
+.depoimento-card-destaque:hover,
+.abordagem-card:hover,
+.publico-item:hover,
+.resultado-item:hover,
+.localizacao-item:hover,
+.passo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-media);
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== LOADING ANIMATION ===== */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

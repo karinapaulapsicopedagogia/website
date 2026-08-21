@@ -1,0 +1,87 @@
+/* ========================================
+   PALETA DE CORES - KARINA PAULA
+   ======================================== */
+
+:root {
+    /* CORES PRINCIPAIS */
+    --verde-claro: #D4E9D6;
+    --verde-claro-escuro: #B8D9BA;
+    --verde-escuro: #6B8F71;
+    --verde-musgo: #5A7A5F;
+    
+    --azul-marinho: #1B2A4A;
+    --azul-marinho-claro: #2A3F66;
+    --azul-claro: #B3D9F2;
+    --azul-claro-escuro: #8FC4E6;
+    
+    --laranja: #F28C28;
+    --laranja-claro: #F5A64D;
+    --laranja-escuro: #D97A1E;
+    
+    --amarelo: #F7DC6F;
+    --amarelo-claro: #F9E68C;
+    --amarelo-escuro: #D4B84A;
+    
+    --bege: #FDF6E3;
+    --bege-escuro: #F5EDD6;
+    
+    --marrom: #6B4F3C;
+    --marrom-claro: #8A6B54;
+    
+    --vermelho: #D94A4A;
+    --vermelho-claro: #E66A6A;
+    
+    /* CORES FUNCIONAIS */
+    --branco: #FFFFFF;
+    --preto: #1A1A1A;
+    --cinza-claro: #F0F0F0;
+    --cinza-medio: #A0A0A0;
+    
+    /* CORES DE FUNDO */
+    --bg-principal: var(--bege);
+    --bg-secundario: var(--verde-claro);
+    --bg-terciario: var(--azul-claro);
+    --bg-rodape: var(--azul-marinho);
+    
+    /* CORES DE TEXTO */
+    --texto-principal: var(--marrom);
+    --texto-claro: var(--bege);
+    --texto-escuro: var(--azul-marinho);
+    --texto-destaque: var(--laranja);
+    
+    /* CORES DE BOTÕES */
+    --btn-primary-bg: var(--laranja);
+    --btn-primary-text: var(--branco);
+    --btn-primary-hover: var(--laranja-escuro);
+    
+    --btn-secondary-bg: transparent;
+    --btn-secondary-text: var(--azul-marinho);
+    --btn-secondary-border: var(--azul-marinho);
+    --btn-secondary-hover: var(--azul-marinho);
+    --btn-secondary-hover-text: var(--branco);
+    
+    /* CORES DE CARDS */
+    --card-verde-bg: var(--verde-claro);
+    --card-azul-bg: var(--azul-claro);
+    --card-amarelo-bg: var(--amarelo-claro);
+    --card-laranja-bg: var(--laranja-claro);
+    
+    /* SOMBRAS */
+    --sombra-suave: 0 4px 20px rgba(27, 42, 74, 0.08);
+    --sombra-media: 0 8px 30px rgba(27, 42, 74, 0.12);
+    --sombra-forte: 0 12px 40px rgba(27, 42, 74, 0.2);
+    --sombra-laranja: 0 8px 25px rgba(242, 140, 40, 0.3);
+    
+    /* BORDAS */
+    --borda-padrao: 2px solid var(--verde-claro-escuro);
+    --borda-destaque: 3px solid var(--laranja);
+    
+    /* TIPOGRAFIA */
+    --fonte-titulo: 'Playfair Display', 'Georgia', serif;
+    --fonte-texto: 'Nunito', 'Arial', sans-serif;
+    
+    /* ESPAÇAMENTOS */
+    --container-max: 1200px;
+    --padding-padrao: 80px 0;
+    --gap-padrao: 30px;
+}

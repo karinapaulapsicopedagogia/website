@@ -1,0 +1,1079 @@
+/* ========================================================
+   RESPONSIVE.CSS - Karina Paula Psicopedagogia
+   Versão Completa e Corrigida
+   ======================================================== */
+
+/* ========================================================
+   LAPTOP E DESKTOP
+   ======================================================== */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-5xl);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .differentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-detail-grid {
+        gap: 40px;
+    }
+}
+
+/* ========================================================
+   TABLET LANDSCAPE
+   ======================================================== */
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    /* ===== HOME / HERO ===== */
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* ===== SOBRE ===== */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ===== SERVIÇOS ===== */
+    .services-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* ===== DIFERENCIAIS ===== */
+    .differentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ===== CONTATO ===== */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        height: 100vh;
+        background: var(--color-white);
+        flex-direction: column;
+        padding: var(--spacing-2xl);
+        box-shadow: var(--shadow-xl);
+        transition: right var(--transition-base);
+        gap: var(--spacing-md);
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    .navbar-menu.active {
+        right: 0;
+    }
+
+    .navbar-menu a {
+        font-size: var(--font-size-lg);
+        padding: var(--spacing-sm) 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-actions .btn-whatsapp-nav {
+        display: none;
+    }
+
+    .navbar-actions {
+        gap: var(--spacing-sm);
+    }
+
+    /* ===== SOBRE PAGE ===== */
+    .about-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .trajectory-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ===== SERVIÇOS PAGE ===== */
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* ===== FAQ PAGE ===== */
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ===== BADGE EXPERIÊNCIA ===== */
+    .experience-badge {
+        bottom: 10px;
+        right: 10px;
+        padding: var(--spacing-md);
+    }
+
+    .experience-badge .number {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+/* ========================================================
+   TABLET PORTRAIT
+   ======================================================== */
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+        padding: 0 var(--spacing-md);
+    }
+
+    /* ===== GERAL ===== */
+    section {
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    /* ===== HOME / HERO ===== */
+    .hero-section {
+        min-height: 100vh;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-content {
+        padding: 100px 0 60px !important;
+    }
+
+    /* ===== SOBRE ===== */
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image .image-container {
+        min-height: 300px;
+    }
+
+    /* ===== SERVIÇOS ===== */
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .service-card {
+        padding: var(--spacing-lg);
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* ===== DIFERENCIAIS ===== */
+    .differentials-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+    }
+
+    /* ===== PROCESSO ===== */
+    .process-steps {
+        padding: 0 var(--spacing-md);
+    }
+
+    .step {
+        padding: var(--spacing-md);
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-number {
+        font-size: var(--font-size-2xl);
+        min-width: auto;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+        padding: 0;
+    }
+
+    /* ===== DEPOIMENTOS ===== */
+    .testimonial-card {
+        padding: var(--spacing-lg);
+    }
+
+    .testimonial-card blockquote {
+        font-size: var(--font-size-base);
+    }
+
+    .slider-controls {
+        gap: var(--spacing-md);
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-lg);
+    }
+
+    /* ===== CONTATO ===== */
+    .contact-form {
+        padding: var(--spacing-xl);
+    }
+
+    .contact-item {
+        flex-wrap: wrap;
+    }
+
+    .contact-hours {
+        text-align: center;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+
+    /* ===== BOTÕES FLUTUANTES ===== */
+    .floating-whatsapp {
+        width: 56px;
+        height: 56px;
+        bottom: var(--spacing-lg);
+        right: var(--spacing-lg);
+    }
+
+    .floating-whatsapp img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: calc(var(--spacing-lg) + 68px);
+        right: var(--spacing-lg);
+    }
+
+    /* ===== SCROLL INDICATOR ===== */
+    .scroll-indicator {
+        bottom: var(--spacing-lg);
+    }
+
+    /* ===== SOBRE PAGE ===== */
+    .about-page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-detail-content h2 {
+        font-size: 2rem;
+    }
+
+    .trajectory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ===== SERVIÇOS PAGE ===== */
+    .services-page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .service-detail-card {
+        padding: 30px 25px;
+    }
+
+    .service-detail-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .services-detail-grid {
+        gap: 24px;
+    }
+
+    /* ===== FAQ PAGE ===== */
+    .faq-page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+        padding: 16px 18px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 18px 18px 18px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ===== SERVICE PAGES ===== */
+    .service-page-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-page-header .page-title {
+        font-size: 1.1rem;
+    }
+
+    .service-detail-content h2 {
+        font-size: 2rem;
+    }
+
+    .service-detail-grid {
+        gap: 30px;
+    }
+
+    /* ===== OBRIGADO PAGE ===== */
+    .thanks-container {
+        padding: 40px 30px;
+    }
+
+    .thanks-container h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* ========================================================
+   MOBILE
+   ======================================================== */
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* ===== GERAL ===== */
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-sm);
+    }
+
+    /* ===== HOME / HERO ===== */
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .hero-badge {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-sm);
+    }
+
+    .hero-buttons {
+        gap: var(--spacing-sm);
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        font-size: var(--font-size-sm) !important;
+        padding: 8px 16px !important;
+        min-width: 140px !important;
+    }
+
+    /* ===== DIFERENCIAIS ===== */
+    .differentials-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .differential-item {
+        padding: var(--spacing-lg);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-links {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-brand img {
+        margin: 0 auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+        font-size: var(--font-size-xs);
+    }
+
+    /* ===== NAVBAR MOBILE ===== */
+    .navbar-menu {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* ===== CONTATO ===== */
+    .contact-item {
+        flex-wrap: wrap;
+    }
+
+    .contact-hours {
+        text-align: center;
+    }
+
+    /* ===== BOTÕES FLUTUANTES ===== */
+    .floating-whatsapp {
+        width: 48px;
+        height: 48px;
+        bottom: var(--spacing-md);
+        right: var(--spacing-md);
+    }
+
+    .floating-whatsapp img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .floating-whatsapp .tooltip {
+        display: none;
+    }
+
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: calc(var(--spacing-md) + 58px);
+        right: var(--spacing-md);
+    }
+
+    .back-to-top img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    /* ===== EXPERIENCE BADGE ===== */
+    .experience-badge {
+        padding: var(--spacing-sm);
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .experience-badge .number {
+        font-size: var(--font-size-xl);
+    }
+
+    .experience-badge .label {
+        font-size: var(--font-size-xs);
+    }
+
+    /* ===== SERVICE CARDS ===== */
+    .service-card {
+        padding: var(--spacing-lg);
+    }
+
+    .service-card h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    /* ===== SERVICE DETAIL CARDS ===== */
+    .service-detail-card {
+        padding: 24px 18px;
+    }
+
+    .service-detail-card ul li {
+        font-size: 0.85rem;
+        padding: 6px 0 6px 24px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 14px 16px;
+    }
+
+    .faq-question .faq-icon {
+        font-size: 1.2rem;
+        width: 24px;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+
+    /* ===== OBRIGADO PAGE ===== */
+    .thanks-container {
+        padding: 30px 20px;
+    }
+
+    .thanks-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .thanks-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .thanks-info {
+        padding: 14px 16px;
+    }
+
+    .thanks-info p {
+        font-size: 0.85rem;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-whatsapp {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    .thanks-buttons {
+        gap: 8px;
+    }
+
+    /* ===== SOBRE PAGE ===== */
+    .about-page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-page-hero p {
+        font-size: 1rem;
+    }
+
+    /* ===== SERVICOS PAGE ===== */
+    .services-page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .services-page-hero p {
+        font-size: 1rem;
+    }
+
+    .service-detail-card .btn-service {
+        font-size: 0.8rem;
+        padding: 8px 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ===== FAQ PAGE ===== */
+    .faq-page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .faq-page-hero p {
+        font-size: 1rem;
+    }
+
+    .faq-categories .category-btn {
+        font-size: 0.8rem;
+        padding: 6px 16px;
+    }
+
+    /* ===== CTA ===== */
+    .services-cta-content h2,
+    .faq-cta-content h2,
+    .service-cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .services-cta-content p,
+    .faq-cta-content p,
+    .service-cta-content p {
+        font-size: 1rem;
+    }
+
+    .btn-cta {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+}
+
+/* ========================================================
+   EXTRA SMALL MOBILE
+   ======================================================== */
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    /* ===== HOME / HERO ===== */
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        font-size: 0.75rem !important;
+        padding: 6px 12px !important;
+        min-width: 120px !important;
+    }
+
+    .hero-buttons {
+        gap: 6px;
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    /* ===== CONTATO ===== */
+    .contact-form {
+        padding: var(--spacing-lg);
+    }
+
+    .contact-list {
+        gap: var(--spacing-sm);
+    }
+
+    .contact-item {
+        gap: var(--spacing-sm);
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-icon img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    /* ===== BOTÕES FLUTUANTES ===== */
+    .floating-whatsapp {
+        width: 44px;
+        height: 44px;
+        bottom: var(--spacing-md);
+        right: var(--spacing-md);
+    }
+
+    .floating-whatsapp img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .back-to-top {
+        width: 36px;
+        height: 36px;
+        bottom: calc(var(--spacing-md) + 54px);
+        right: var(--spacing-md);
+    }
+
+    .back-to-top img {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    /* ===== OBRIGADO PAGE ===== */
+    .thanks-container {
+        padding: 24px 16px;
+    }
+
+    .thanks-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .thanks-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+
+    /* ===== PROCESSO ===== */
+    .step {
+        padding: var(--spacing-sm);
+    }
+
+    .step-content h3 {
+        font-size: 1rem;
+    }
+
+    .step-content p {
+        font-size: 0.85rem;
+    }
+
+    /* ===== SERVICE DETAIL ===== */
+    .service-detail-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .service-detail-content p {
+        font-size: 0.95rem;
+    }
+
+    .service-detail-card {
+        padding: 20px 16px;
+    }
+
+    .service-detail-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-detail-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================================
+   ACCESSIBILITY - REDUCED MOTION
+   ======================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+
+    .scroll-indicator {
+        animation: none;
+    }
+
+    .faq-answer {
+        transition: none !important;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 500px;
+        padding: 0 25px 25px 25px;
+    }
+}
+
+/* ========================================================
+   IMPRESSÃO
+   ======================================================== */
+
+@media print {
+    .header,
+    .floating-whatsapp,
+    .back-to-top,
+    .navbar-actions,
+    .scroll-indicator,
+    .slider-controls {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .hero-section {
+        min-height: auto !important;
+        padding: 60px 0 !important;
+    }
+
+    .hero-background {
+        position: relative !important;
+        background: #8A6F5A !important;
+    }
+
+    .hero-overlay {
+        display: none !important;
+    }
+
+    .hero-content {
+        padding: 40px 0 !important;
+    }
+
+    .container {
+        max-width: 100% !important;
+        padding: 0 20px !important;
+    }
+
+    .footer {
+        background: #FEF5E7 !important;
+        color: #2F2F2F !important;
+        page-break-inside: avoid;
+    }
+
+    section {
+        page-break-inside: avoid;
+        padding: 40px 0 !important;
+    }
+
+    .service-card,
+    .differential-item,
+    .value-item,
+    .faq-item {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+
+    .btn,
+    .btn-hero-primary,
+    .btn-hero-secondary,
+    .btn-cta {
+        background: #8A6F5A !important;
+        color: white !important;
+        border: none !important;
+        padding: 8px 16px !important;
+    }
+
+    .btn-hero-secondary {
+        background: transparent !important;
+        color: black !important;
+        border: 1px solid #333 !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+}
+
+/* ========================================================
+   HIGH DPI (RETINA) DISPLAYS
+   ======================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image,
+    .about-image img,
+    .service-icon img {
+        image-rendering: auto;
+    }
+}
+
+/* ========================================================
+   DARK MODE RESPONSIVO
+   ======================================================== */
+
+[data-theme="dark"] @media (max-width: 768px) {
+    .navbar-menu {
+        background: var(--color-background);
+        border-left: 1px solid var(--color-border);
+    }
+
+    .navbar-menu a {
+        color: var(--color-text);
+    }
+
+    .navbar-menu a:hover {
+        color: var(--color-secondary);
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .footer {
+        background: var(--color-text) !important;
+        color: var(--color-white) !important;
+    }
+
+    .footer-brand p {
+        color: var(--color-white) !important;
+        opacity: 0.7;
+    }
+
+    .footer-column h4 {
+        color: var(--color-white) !important;
+    }
+
+    .footer-column a {
+        color: var(--color-white) !important;
+        opacity: 0.7;
+    }
+
+    .footer-column a:hover {
+        color: var(--color-secondary) !important;
+    }
+
+    .footer-social a {
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .footer-social a:hover {
+        background: var(--color-primary) !important;
+    }
+
+    .footer-social img {
+        filter: brightness(0) invert(1) !important;
+    }
+
+    .footer-bottom {
+        border-top-color: rgba(255, 255, 255, 0.1);
+        color: var(--color-white) !important;
+        opacity: 0.6;
+    }
+
+    .footer-bottom a {
+        color: var(--color-secondary) !important;
+    }
+
+    .footer-content {
+        border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+[data-theme="dark"] @media (max-width: 576px) {
+    .faq-item {
+        background: var(--color-background);
+        border-color: var(--color-border);
+    }
+
+    .faq-question {
+        color: var(--color-text);
+    }
+
+    .faq-question:hover {
+        color: var(--color-secondary);
+    }
+
+    .faq-question .faq-icon {
+        color: var(--color-secondary);
+    }
+
+    .faq-answer p {
+        color: var(--color-text-light);
+    }
+
+    .service-detail-card {
+        background: var(--color-background);
+        border-color: var(--color-border);
+    }
+
+    .service-detail-card ul li {
+        border-bottom-color: var(--color-border);
+    }
+
+    .differential-item {
+        background: var(--color-background);
+    }
+
+    .value-item {
+        background: var(--color-background);
+    }
+
+    .contact-form {
+        background: var(--color-background);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background: var(--color-background);
+        border-color: var(--color-border);
+        color: var(--color-text);
+    }
+
+    .thanks-container {
+        background: var(--color-background);
+        border: 1px solid var(--color-border);
+    }
+
+    .thanks-info {
+        background: var(--color-section-dark);
+    }
+
+    .thanks-container h1 {
+        color: var(--color-secondary);
+    }
+
+    .thanks-container .highlight-name {
+        color: var(--color-secondary);
+    }
+}

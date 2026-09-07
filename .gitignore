@@ -1,0 +1,60 @@
+# ========================================================
+# .gitignore - Karina Paula Psicopedagogia
+# ========================================================
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Build directories
+dist/
+build/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.tmp
+
+# Uploaded files
+uploads/
+media/
+
+# Temporary files
+temp/
+tmp/
+
+# Bundle files
+*.min.js
+*.min.css
+
+# Package files
+package-lock.json
+yarn.lock
+
+# Misc
+*.sublime-*
+*.cache
+*.map
+*.md

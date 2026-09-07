@@ -1,0 +1,9 @@
+{
+    "name": "Karina Paula - Psicopedagogia Clínica",
+    "short_name": "Karina Paula",
+    "description": "Atendimento psicopedagógico clínico personalizado",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FAF8F5",
+    "theme_color": "#8A6F5A"
+}
